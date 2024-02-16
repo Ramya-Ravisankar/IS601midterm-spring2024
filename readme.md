@@ -7,10 +7,10 @@
 3. create the virtual environment
 4. Activate the virtual environment
 5. pip3 install -r requirements.txt
-6. install the pytest , pylint libraries
+6. install the requirements with pip
 
 ## Testing
 
-1. pytest
+1. pytest --num_records=10
 2. pytest --pylint
 3. pytest --pylint --cov
