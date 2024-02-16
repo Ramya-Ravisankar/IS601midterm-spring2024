@@ -1,14 +1,11 @@
 '''My Calculator Test'''
-# pylint: disable=locally-disabled, multiple-statements, fixme, line-too-long
-
-
 from decimal import Decimal
 import pytest
+
 from calculator.calculation import Calculation
 from calculator.calculations import Calculations
 
 from calculator.operations import add, subtract
-
 @pytest.fixture
 def setup_calculations():
     Calculations.clear_history()
@@ -17,7 +14,6 @@ def setup_calculations():
 
 def test_add_calculation(setup_calculations):
     calc = Calculation(Decimal('2'), Decimal('2'), add)
-    # Add the calculation to the history.
     Calculations.add_calculation(calc)
     assert Calculations.get_latest() == calc, "Failed to add the calculation to the history"
 
@@ -35,6 +31,7 @@ def test_get_latest(setup_calculations):
     assert latest.a == Decimal('20') and latest.b == Decimal('3'), "Did not get the correct latest calculation"
 
 def test_find_by_operation(setup_calculations):
+    """Test finding calculations in the history by operation type."""
     add_operations = Calculations.find_by_operation("add")
     assert len(add_operations) == 1, "Did not find the correct number of calculations with add operation"
     subtract_operations = Calculations.find_by_operation("subtract")
