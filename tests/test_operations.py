@@ -4,9 +4,9 @@ import pytest
 from calculator.calculation import Calculation
 from calculator.operations import add, subtract, multiply, divide
 
+# testing various operations
 # pylint: disable-next=invalid-name
 def test_operation(a, b, operation, expected):
-    '''Testing various operations'''
     calculation = Calculation(a, b, operation)
     assert calculation.perform() == expected, f"{operation.__name__} operation failed"
 
