@@ -2,6 +2,7 @@ import pytest
 from app import App
 from app.commands.goodbye import GoodbyeCommand
 from app.commands.greet import GreetCommand
+from app.commands.add import AddCommand
 
 def test_greet_command(capfd):
     command = GreetCommand()
@@ -38,3 +39,9 @@ def test_app_menu_command(capfd, monkeypatch):
         app.start()  # Assuming App.start() is now a static method based on previous discussions
 
     assert str(e.value) == "Exiting...", "The app did not exit as expected"
+
+def test_add_command(capfd):
+    command = AddCommand()
+    command.execute()
+    out,_err = capfd.readouterr()
+    assert out == "Hello Ramya!\n", "The AddCommand should print 'Hello Ramya!'"
