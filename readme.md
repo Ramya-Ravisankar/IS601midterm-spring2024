@@ -11,15 +11,14 @@ Incorporated the functionalities discussed in the lecture videos to the previous
 4. implemented the plugins - refactored the code to automatically load plugins, facilitating easy command additions without manual updates.
 
 ## References
-
 1. [Python Loop Performance](https://www.youtube.com/watch?v=Qgevy75co8c) - Insights into loop efficiency.
 2. [Habits of The Good Programmer](https://www.youtube.com/watch?v=q1qKv5TBaOA&t=2s) - Design patterns and best practices.
 3. [Global Interpreter Lock and Multicore Issues in Python](https://www.youtube.com/watch?v=m4zDBk0zAUY) - Python concurrency explained by its inventor.
 4. [Design Patterns Explained](https://www.youtube.com/watch?v=tv-_1er1mWI) - General programming design patterns.
 5. [5 Patterns in Python](https://www.youtube.com/watch?v=YMAwgRwjEOQ) - Applying patterns in Python.
-
-6. Instructor's Video:
-Plugins Lecture](https://youtu.be/c2PmjazGW2w)
+6. [Instructor videos]
+Plugins Lecture- (https://youtu.be/c2PmjazGW2w)
+command pattern lecture - https://www.youtube.com/watch?v=3DVUN091T5g
 
 ## Project Setup
 
