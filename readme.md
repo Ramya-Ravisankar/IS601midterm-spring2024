@@ -4,7 +4,7 @@ Incorporated the functionalities discussed in the lecture videos to the previous
 ### More information on the code changes and description
 1. added four basic commands: add, subtract, multiply, and divide, making the calculator program interactive.
 
-2. Implemented a menu command that displays available commands from the command dictionary at the application's start and when the user types "menu." This is a self-guided challenge to deepen your understanding of dynamic command integration.
+2. Implemented a menu command that displays available commands from the command dictionary at the application's start and when the user types "menu."
 
 3. Tested the functionality and coverage
 
@@ -16,7 +16,7 @@ Incorporated the functionalities discussed in the lecture videos to the previous
 3. [Global Interpreter Lock and Multicore Issues in Python](https://www.youtube.com/watch?v=m4zDBk0zAUY) - Python concurrency explained by its inventor.
 4. [Design Patterns Explained](https://www.youtube.com/watch?v=tv-_1er1mWI) - General programming design patterns.
 5. [5 Patterns in Python](https://www.youtube.com/watch?v=YMAwgRwjEOQ) - Applying patterns in Python.
-6. [Instructor videos]
+6. [Instrcu]
 Plugins Lecture- (https://youtu.be/c2PmjazGW2w)
 command pattern lecture - https://www.youtube.com/watch?v=3DVUN091T5g
 
