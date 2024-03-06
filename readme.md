@@ -47,7 +47,6 @@ To complement the project work, the following videos are highly recommended:
 5. [5 Patterns in Python](https://www.youtube.com/watch?v=YMAwgRwjEOQ) - Applying patterns in Python.
 
 ## Project Setup
-
 1. Clone the repository.
 2. CD into the project folder.
 3. Create and activate the virtual environment (VE).
