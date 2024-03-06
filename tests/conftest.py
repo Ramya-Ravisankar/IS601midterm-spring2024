@@ -2,15 +2,14 @@
 from decimal import Decimal
 from faker import Faker
 import pytest
-from calculator.operations import add, subtract, multiply, divide
-
+from calculator.operations import Operations as op
 fake = Faker()
 def generate_test_data(num_records):
     operation_mappings = {
-        'add': add,
-        'subtract': subtract,
-        'multiply': multiply,
-        'divide': divide
+        'add': op.addition,
+        'subtract': op.subtraction,
+        'multiply': op.multiplication,
+        'divide': op.division
     }
     # Generate test data
     for _ in range(num_records):
@@ -19,10 +18,10 @@ def generate_test_data(num_records):
         operation_name = fake.random_element(elements=list(operation_mappings.keys()))
         operation_func = operation_mappings[operation_name]
         # ensuring b is not zero for divide operation
-        if operation_func == divide: # pylint: disable=W0143
+        if operation_func == op.division: # pylint: disable=W0143
             b = Decimal('1') if b == Decimal('0') else b
         try:
-            if operation_func == divide and b == Decimal('0'): # pylint: disable=W0143
+            if operation_func == op.division and b == Decimal('0'): # pylint: disable=W0143
                 expected = "ZeroDivisionError"
             else:
                 expected = operation_func(a, b)
