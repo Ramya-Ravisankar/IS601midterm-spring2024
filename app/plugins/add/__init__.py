@@ -1,6 +1,6 @@
 '''app/plugins/add/__init__.py'''
 from app.commands import Command
-from app.calculator import Calculator
+from calculator import Calculator
 from app.utils.validation import validate_decimal_input
 import logging
 
