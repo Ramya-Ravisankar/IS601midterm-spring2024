@@ -1,4 +1,4 @@
-'''operation.py: Contains simple arithmetic operations: addition, subtraction, multiplication, and division'''
+'''calculator/operation.py: Contains simple arithmetic operations: addition, subtraction, multiplication, and division'''
 from decimal import Decimal # Define operation functions with type hints
 
 class Operations():
