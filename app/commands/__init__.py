@@ -1,5 +1,7 @@
+'''app/commands/__init__.py'''
 from abc import ABC, abstractmethod
 from typing import Dict
+import logging
 
 class Command(ABC):
     '''Abstract base class for commands.'''
@@ -22,4 +24,4 @@ class CommandHandler:
         try:
             self.commands[command_name].execute()
         except KeyError:
-            print(f"No such command: {command_name}")
+            raise KeyError(f"Unknown command: {command_name}")
