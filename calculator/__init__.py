@@ -1,9 +1,9 @@
-'''__init__.py : Imports and integrates various modules and functions needed for the calculator. Defines a class with methods for performing arithmetic operations, managing calculations and history.'''
+'''app/calculator/__init__.py : Imports and integrates various modules and functions needed for the calculator. Defines a class with methods for performing arithmetic operations, managing calculations and history.'''
 from decimal import Decimal
 from typing import Callable
-from calculator.calculation import Calculation
-from calculator.operations import Operations as op
-from calculator.calc_history import CalculationHistory as his
+from app.calculator.calculation import Calculation
+from app.calculator.operations import Operations as op
+from app.calculator.calc_history import CalculationHistory as his
 
 class Calculator:
     '''Serves as a core componet of a basic calculator system. Integrates components for performing arithmetic calculations and managing history.'''
