@@ -1,4 +1,4 @@
-'''calculation.py: Defines a single calculation. Provides abstraction for handeling individual calculations in the Calculator class.'''
+'''app/calculator/calculation.py: Defines a single calculation. Provides abstraction for handeling individual calculations in the Calculator class.'''
 from decimal import Decimal
 from typing import Callable
 
