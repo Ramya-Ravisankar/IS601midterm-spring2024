@@ -1,3 +1,4 @@
+'''Test File: app/calculator/__init__.py'''
 # Disable specific pylint warnings that are not relevant for this file.
 # pylint: disable=unnecessary-dunder-call, invalid-name
 import pytest
