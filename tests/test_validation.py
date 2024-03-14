@@ -17,6 +17,7 @@ def mock_input(monkeypatch):
     (['invalid', '5.25'], Decimal('5.25')),  # Invalid input followed by valid input
     (['invalid', 'invalid', '5.25'], Decimal('5.25')),  # Invalid input twice followed by valid input
 ])
+
 def test_validate_decimal_input(input_values, expected_output, capsys, mock_input, monkeypatch):
     '''Test validate_decimal_input with different input values.'''
     inputs = iter(input_values)
