@@ -5,7 +5,7 @@ from app.plugins.divide import DivideCommand
 
 # decorator is used to temporarily replace objects with mock objects during the execution of the test.
 @patch('builtins.input', side_effect=['6', '2'])
-@patch('app.calculator.Calculator.divide', return_value=Decimal('3'))
+@patch('calculator.Calculator.divide', return_value=Decimal('3'))
 def test_execute(mock_calculator_divide, mock_input):
     '''Test execute function of DivideCommand.'''
     command = DivideCommand()

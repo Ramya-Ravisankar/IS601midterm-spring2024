@@ -1,4 +1,5 @@
-'''app/calculator/calc_history.py: Manages history of calculations. Contains methods for adding to, clearing, and retrieving calculation history.'''
+'''app/calculator/calc_history.py: Manages history of calculations.
+Contains methods for adding to, clearing, and retrieving calculation history.'''
 from typing import List
 from calculator.calculation import Calculation
 

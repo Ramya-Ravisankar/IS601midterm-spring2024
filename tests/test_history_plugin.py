@@ -9,7 +9,7 @@ from calculator.operations import Operations
 class TestHistoryCommandExecute(unittest.TestCase):
     '''Test case for the execute method of the HistoryCommand class.'''
 
-    @patch('app.calculator.calc_history.CalculationHistory.get_latest_history')
+    @patch('calculator.calc_history.CalculationHistory.get_latest_history')
     def test_execute_prints_latest_calculation(self, mock_get_latest_history):
         '''Test whether execute method prints the latest calculation correctly.'''
         # Mocking the latest calculation
@@ -31,7 +31,7 @@ class TestHistoryCommandExecute(unittest.TestCase):
             expected_output = "Calculation(2, 3, addition) results in 5"
             self.assertIn(expected_output, mock_stdout.getvalue().strip())
 
-    @patch('app.calculator.calc_history.CalculationHistory.get_history')
+    @patch('calculator.calc_history.CalculationHistory.get_history')
     def test_execute_prints_all_calculations(self, mock_get_history):
         '''Test whether execute method prints all calculations correctly.'''
         # Mocking all calculations
@@ -56,7 +56,7 @@ class TestHistoryCommandExecute(unittest.TestCase):
             expected_output = "All Calculations:"
             self.assertIn(expected_output, mock_stdout.getvalue().strip())
 
-    @patch('app.calculator.calc_history.CalculationHistory.clear_history')
+    @patch('calculator.calc_history.CalculationHistory.clear_history')
     def test_execute_clears_history(self, mock_clear_history):
         '''Test whether execute method clears calculation history correctly.'''
         # Create an instance of HistoryCommand
@@ -86,7 +86,7 @@ class TestHistoryCommandExecute(unittest.TestCase):
             expected_output = "Invalid choice"
             self.assertIn(expected_output, mock_stdout.getvalue().strip())
 
-    @patch('app.calculator.calc_history.CalculationHistory.get_latest_history')
+    @patch('calculator.calc_history.CalculationHistory.get_latest_history')
     @patch('builtins.input')
     def test_execute_handles_division_by_zero(self, mock_input, mock_get_latest_history):
         '''Test whether execute method handles division by zero correctly.'''
@@ -110,7 +110,7 @@ class TestHistoryCommandExecute(unittest.TestCase):
             expected_output = f"{mock_calculation} is undefined."
             self.assertIn(expected_output, mock_stdout.getvalue().strip())
 
-    @patch('app.calculator.calc_history.CalculationHistory.get_history')
+    @patch('calculator.calc_history.CalculationHistory.get_history')
     def test_execute_handles_compute_exception(self, mock_get_history):
         '''Test whether execute method handles compute exception correctly.'''
         # Mocking history with calculations
@@ -128,7 +128,7 @@ class TestHistoryCommandExecute(unittest.TestCase):
         mock_compute = MagicMock(side_effect=Exception("Some error occurred"))
 
         # Patch the Calculation class to replace compute() with the mock_compute object
-        with patch('app.calculator.calculation.Calculation.compute', mock_compute):
+        with patch('calculator.calculation.Calculation.compute', mock_compute):
             # Patch input() to avoid stdin capture
             with patch('builtins.input', return_value='2'):  # Simulating user choosing option 2
                 # Redirect stdout to capture print statements
